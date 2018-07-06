@@ -1,5 +1,5 @@
-# bash-scripts
-**synchronize_file_variables.sh**
+# ops-scripts
+**bash/synchronize_file_variables.sh**
 ------
 **_Goal:_** Synchronize variables between a template file and a destination file.
 
