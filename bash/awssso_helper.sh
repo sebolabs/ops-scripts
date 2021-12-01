@@ -22,8 +22,6 @@ function unset_awssso() {
 }
 
 function awssso() {
-    CWD=$(pwd)
-
     unset_awssso
 
     echo -n "AWS SSO Profile: "
@@ -35,7 +33,7 @@ function awssso() {
         echo "[ERR] Failed to log in!" >&2
         return 1
     fi
-    echo "[OK] Successully logged in."  
+    echo "[OK] Successfully logged in."  
 
     echo "\nReading access token..."
     SSO_ACCESS_JSON_PATH="${SSO_CACHE_PATH}/$(eval ls -tr ${SSO_CACHE_PATH} | tail -1)"
