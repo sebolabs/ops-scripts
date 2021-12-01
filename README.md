@@ -1,4 +1,42 @@
 # ops-scripts
+**bash/awssso_helper.sh**
+------
+**_Goal:_** Obtain temporary AWS credentials with AWS SSO and to use with AWS CLI or any AWS infrastructure orchestrator.
+
+**_Usage:_**
+
+Requires an AWS SSO profile to be configured. See source code for details.
+```bash
+$ source awssso_helper.sh
+$ awssso
+```
+
+**_Output:_**
+```
+AWS SSO Profile: my-profile
+[OK] Successully logged in.
+
+Reading access token...
+> SSO account ID: 012345678910
+> SSO role name: AWSAdministratorAccess
+> SSO region: eu-central-1
+[OK] Access token retrieved successfully.
+
+Getting SSO role credentials...
+> User ID: AROARMXXXXXXXXXXXXXXX:username
+[OK] AWS credentials retrieved successfully.
+
+AWS region to work with [eu-central-1]:
+[OK] AWS region set successfully.
+
+$ env | grep AWS_
+AWS_PROFILE=my-profile
+AWS_ACCESS_KEY_ID=ASIARAIUWDBRSYFY...
+AWS_SECRET_ACCESS_KEY=xrVlsUZ31IOK...
+AWS_SESSION_TOKEN=IQoJb3JpZ2luX2Vj...
+AWS_REGION=eu-central-1
+```
+
 **bash/synchronize_file_variables.sh**
 ------
 **_Goal:_** Synchronize variables between a template file and a destination file.
