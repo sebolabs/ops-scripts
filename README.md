@@ -14,7 +14,7 @@ $ awssso
 **_Output:_**
 ```
 AWS SSO Profile: my-profile
-[OK] Successully logged in.
+[OK] Successfully logged in.
 
 Reading access token...
 > SSO account ID: 012345678910
